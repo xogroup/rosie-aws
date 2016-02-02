@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require "rosie/aws"
+
+Rosie::Aws::Cleaner::BeanstalkApplicationVersion.delete_unused_versions
