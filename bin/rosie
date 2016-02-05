@@ -1,0 +1,3 @@
+# #!/usr/bin/env ruby
+require "rosie-aws/cli"
+RosieAWS::CLI.start(ARGV)

@@ -7,3 +7,6 @@
 /pkg/
 /spec/reports/
 /tmp/
+.tags
+.tags1
+aws_values.json

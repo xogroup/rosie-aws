@@ -1,34 +1,34 @@
 # Rosie::Aws
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rosie/aws`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Your easy to use tool to help you clean up your AWS resources
 
 ## Installation
 
-Add this line to your application's Gemfile:
+  $ gem install rosie-aws
 
-```ruby
-gem 'rosie-aws'
-```
+## Setup
+  The ```aws-sdk``` requires you to setup the region. To do this, run something like
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rosie-aws
+  ```rosie set_region us-east-1```
 
 ## Usage
 
-TODO: Write usage instructions here
+Running ```rosie``` will give you your options:
 
+```
+⇒  rosie
+Commands:
+  rosie clean_beanstalk_application_versions APPLICATION_NAME  # Deletes all undeployed elastic beanstalk application versions
+  rosie clean_ecr_images REPO_NAME                             # Deletes all untagged docker images in your ECR
+  rosie help [COMMAND]                                         # Describe available commands or one specific command
+  rosie init                                                   # Sets up aws settings
+  rosie set_region REGION                                      # Sets the region to be used in all AWS commands
+```
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+To install this gem onto your local machine, run `rake install`.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
@@ -38,4 +38,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
