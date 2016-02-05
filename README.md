@@ -1,4 +1,6 @@
-# Rosie::Aws
+# Rosie::AWS
+
+![Rosie](https://github.com/xogroup/rosie-aws/blob/master/rosie.jpg "Rosie")
 
 Your easy to use tool to help you clean up your AWS resources
 
