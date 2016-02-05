@@ -1,4 +1,4 @@
-# Rosie::Aws
+# Rosie::AWS
 
 ![Rosie](https://github.com/xogroup/rosie-aws/blob/master/rosie.jpg "Rosie")
 
