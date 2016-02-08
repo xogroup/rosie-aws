@@ -5,11 +5,6 @@ require "thor"
 
 module RosieAWS
   class CLI < Thor
-    desc "set_region REGION", "Sets the region to be used in all AWS commands"
-    def set_region(region)
-      File.write('aws_values.json', {region: region}.to_json)
-    end
-
     desc "clean_ecr_images REPO_NAME", "Deletes all untagged docker images in your ECR"
     def clean_ecr_images(repo_name)
       init_region
@@ -24,10 +19,7 @@ module RosieAWS
 
     private
     def init_region
-      aws_values = JSON.parse(File.open("aws_values.json").read)
-      Aws.config.update({
-        region: aws_values["region"]
-      })
+      AWS.config(AWSConfig.default.config_hash)
     end
   end
 end

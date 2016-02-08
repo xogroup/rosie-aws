@@ -6,12 +6,14 @@ Your easy to use tool to help you clean up your AWS resources
 
 ## Installation
 
-  $ gem install rosie-aws
+    gem install rosie-aws
 
 ## Setup
-  The ```aws-sdk``` requires you to setup the region. To do this, run something like
+  The ```aws-sdk``` requires you to have set up your credentials and region using the AWS cli (https://aws.amazon.com/cli/) and running
 
-  ```rosie set_region us-east-1```
+    aws configure
+
+  It wil use the credentials set in your ```~/.aws/config``` and ```~/.aws/credentials```.
 
 ## Usage
 
@@ -23,14 +25,10 @@ Commands:
   rosie clean_beanstalk_application_versions APPLICATION_NAME  # Deletes all undeployed elastic beanstalk application versions
   rosie clean_ecr_images REPO_NAME                             # Deletes all untagged docker images in your ECR
   rosie help [COMMAND]                                         # Describe available commands or one specific command
-  rosie init                                                   # Sets up aws settings
-  rosie set_region REGION                                      # Sets the region to be used in all AWS commands
 ```
 ## Development
 
 To install this gem onto your local machine, run `rake install`.
-
-To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
