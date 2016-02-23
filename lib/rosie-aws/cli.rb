@@ -19,7 +19,7 @@ module RosieAWS
 
     private
     def init_region
-      AWS.config(AWSConfig.default.config_hash)
+      Aws.config.update(AWSConfig.default.config_hash)
     end
   end
 end
