@@ -17,6 +17,8 @@ module RosieAWS
             version_label: x.version_label
           })
         end
+
+        puts "#{versions_to_delete.count} versions deleted"
       end
     end
   end
